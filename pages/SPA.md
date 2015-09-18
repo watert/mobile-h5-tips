@@ -13,3 +13,5 @@ SPA后：视图跳转通过js进行视图更新，无须重新加载资源/只�
 3. 路由：所选择的视图与导航在不刷新页面时能保留页面状态、节点与数据。（History.js, director, pjax, HTML5 History API等）
 
 而在移动端，需要更小量级的代码量以获取更快的加载速度，所以在框架选型上，推荐 zepto.js 配合 Backbone.js 或 pjax 的方案，能得到更轻量的体验。
+
+[@watert](https://github.com/watert/)
