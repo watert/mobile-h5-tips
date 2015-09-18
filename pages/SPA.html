@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>SPA方案框架推荐 | mobile-h5-tips</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../pages/resources-bundling.html" />
+    
+    
+    <link rel="prev" href="../index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1" data-basepath=".." data-revision="Fri Sep 18 2015 18:37:42 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="pages/SPA.html">
+            
+                
+                    <a href="../pages/SPA.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        SPA方案框架推荐
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="pages/resources-bundling.html">
+            
+                
+                    <a href="../pages/resources-bundling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Web工程打包压缩方案
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="pages/loading-optimize.html">
+            
+                
+                    <a href="../pages/loading-optimize.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Web加载过程优化方案
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="pages/mobile-framework.html">
+            
+                
+                    <a href="../pages/mobile-framework.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        移动端Web/JS框架推荐
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="pages/HTML5.html">
+            
+                
+                    <a href="../pages/HTML5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        HTML5实用功能推荐
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="pages/CSS3.html">
+            
+                
+                    <a href="../pages/CSS3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        CSS3新功能推荐及优化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="pages/web-security.html">
+            
+                
+                    <a href="../pages/web-security.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Web安全指引
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="pages/compatibility.html">
+            
+                
+                    <a href="../pages/compatibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        移动端Web常见兼容性问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="pages/testing.html">
+            
+                
+                    <a href="../pages/testing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Web/JS测试框架推荐
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >mobile-h5-tips</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="spa-%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8">SPA(&#x5355;&#x9875;&#x5E94;&#x7528;)</h1>
+<p>SPA(Single Page Application)&#xFF0C;&#x5355;&#x9875;&#x5E94;&#x7528;&#xFF0C;&#x5373;&#x5C06;&#x7F51;&#x7AD9;&#x6216;&#x5E94;&#x7528;&#x7684;&#x4E0D;&#x540C;&#x89C6;&#x56FE;&#x4E0E;&#x5185;&#x5BB9;&#x90FD;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x5185;&#x8FDB;&#x884C;&#x903B;&#x8F91;&#x5904;&#x7406;&#x5E76;&#x5C55;&#x73B0;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x4F7F;&#x5F97;&#x4F20;&#x7EDF;&#x5185;&#x5BB9;&#x95F4;&#x7684;&#x5207;&#x6362;&#x53EF;&#x4EE5;&#x65E0;&#x987B;&#x901A;&#x8FC7;&#x9875;&#x9762;&#x7684;&#x8DF3;&#x8F6C;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x7F51;&#x7AD9;&#x6216;&#x5728;&#x7EBF;&#x5E94;&#x7528;&#x5F97;&#x5230;&#x66F4;&#x5FEB;&#x901F;&#x7684;&#x3001;&#x7C7B;&#x4F3C;&#x684C;&#x9762;&#x5E94;&#x7528;&#x7684;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002;</p>
+<p>SPA&#x524D;&#xFF1A;&#x6240;&#x6709;&#x89C6;&#x56FE;&#x8DF3;&#x8F6C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x9759;&#x6001;&#x8D44;&#x6E90;
+SPA&#x540E;&#xFF1A;&#x89C6;&#x56FE;&#x8DF3;&#x8F6C;&#x901A;&#x8FC7;js&#x8FDB;&#x884C;&#x89C6;&#x56FE;&#x66F4;&#x65B0;&#xFF0C;&#x65E0;&#x987B;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x8D44;&#x6E90;/&#x53EA;&#x52A0;&#x8F7D;&#x5FC5;&#x8981;&#x8D44;&#x6E90;&#xFF0C;&#x9875;&#x9762;URL&#x901A;&#x8FC7;hash&#x6216;&#x662F;History API&#x7684;pushState&#x8FDB;&#x884C;&#x66F4;&#x65B0;</p>
+<h2 id="%E9%9C%80%E8%A6%81%E8%A7%A3%E5%86%B3%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A">&#x9700;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#xFF1A;</h2>
+<ol>
+<li>&#x89C6;&#x56FE;&#x6E32;&#x67D3;&#x4E0E;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF1A; &#x9875;&#x9762;&#x5C06;&#x4ECE;&#x4F20;&#x7EDF;&#x7684;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x4F20;&#x8F93;&#x53D8;&#x4E3A;&#x53EA;&#x52A0;&#x8F7D;&#x90E8;&#x5206;HTML&#x7247;&#x6BB5;&#x6216;JSON&#x6570;&#x636E;&#xFF0C;&#x5C06;&#x89C6;&#x56FE;&#x4E0E;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6D4F;&#x89C8;&#x5668;&#x5185;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x3002;&#xFF08;pjax, jQuery&#x7B49;&#xFF09;</li>
+<li>&#x63A7;&#x5236;&#x903B;&#x8F91;&#xFF1A;&#x4F20;&#x7EDF;&#x7684;&#x4E00;&#x6B21;&#x6027;&#x7684;DOM&#x903B;&#x8F91;&#x5904;&#x7406;&#x5C06;&#x53D8;&#x4E3A;&#x66F4;&#x7CBE;&#x5BC6;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x901A;&#x5E38;&#x53D8;&#x4E3A;&#x7531;&#x63A7;&#x5236;&#x5668;&#xFF08;Controller&#xFF09;&#x5C06;&#x89C6;&#x56FE;&#xFF08;View&#xFF09;&#x4E0E;&#x6A21;&#x578B;(Model)&#x5206;&#x79BB;&#x7684; MVC &#x6216; MVVM &#x6A21;&#x5F0F;&#x3002;&#xFF08;Backbone, Emberjs, Angular &#x7B49;&#xFF09;</li>
+<li>&#x8DEF;&#x7531;&#xFF1A;&#x6240;&#x9009;&#x62E9;&#x7684;&#x89C6;&#x56FE;&#x4E0E;&#x5BFC;&#x822A;&#x5728;&#x4E0D;&#x5237;&#x65B0;&#x9875;&#x9762;&#x65F6;&#x80FD;&#x4FDD;&#x7559;&#x9875;&#x9762;&#x72B6;&#x6001;&#x3001;&#x8282;&#x70B9;&#x4E0E;&#x6570;&#x636E;&#x3002;&#xFF08;History.js, director, pjax, HTML5 History API&#x7B49;&#xFF09;</li>
+</ol>
+<p>&#x800C;&#x5728;&#x79FB;&#x52A8;&#x7AEF;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x5C0F;&#x91CF;&#x7EA7;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x4EE5;&#x83B7;&#x53D6;&#x66F4;&#x5FEB;&#x7684;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x6846;&#x67B6;&#x9009;&#x578B;&#x4E0A;&#xFF0C;&#x63A8;&#x8350; zepto.js &#x914D;&#x5408; Backbone.js &#x6216; pjax &#x7684;&#x65B9;&#x6848;&#xFF0C;&#x80FD;&#x5F97;&#x5230;&#x66F4;&#x8F7B;&#x91CF;&#x7684;&#x4F53;&#x9A8C;&#x3002;</p>
+<p><a href="https://github.com/watert/" target="_blank">@watert</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../pages/resources-bundling.html" class="navigation navigation-next " aria-label="Next page: Web工程打包压缩方案"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
