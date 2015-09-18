@@ -1,0 +1,24 @@
+{
+  "name": "mobile-h5-tips",
+  "version": "1.0.0",
+  "description": "mobile-h5-tips ============= 移动端 HTML5 优化方案",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watert/mobile-h5-tips.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/watert/mobile-h5-tips/issues"
+  },
+  "homepage": "https://github.com/watert/mobile-h5-tips",
+  "devDependencies": {
+    "gitbook": "^2.4.0",
+    "gulp": "^3.9.0",
+    "gulp-gh-pages": "^0.5.2"
+  }
+}

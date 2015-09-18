@@ -12,7 +12,7 @@ gulp.task("build", function(cb){
     });
 })
 
-gulp.task("publish", function(){
+gulp.task("publish", ["build"], function(){
     return gulp.src("./_book/**/*").pipe(ghPages());
 });
 gulp.task("default", ["build"])
