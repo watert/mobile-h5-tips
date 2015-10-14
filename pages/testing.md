@@ -73,4 +73,8 @@ $ mocha tests.js
 ![plus wrong terminal](images/testing-2.png)
 
 
+---
+
+未完待续
+
 [@watert](https://github.com/watert/)
