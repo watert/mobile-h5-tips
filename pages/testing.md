@@ -44,7 +44,7 @@ Web/JS测试框架推荐
 以上的安装完成后，我们就可以在 `test/tests.js` 中添加测试案例
 
 
-### 写一个失败的案例
+### 从一个失败的单元开始
 
 在tests.js中添加如下代码:
 
@@ -72,6 +72,40 @@ $ mocha tests.js
 
 ![plus wrong terminal](images/testing-2.png)
 
+而当我们将测试的值修改为正确的时候，测试就将通过了：
+
+```javascript
+assert.equal(1+1 , 2, "check plus wrong");
+```
+
+终端运行结果为：
+
+![plus right](images/testing-3.png)
+
+
+### 测试的前置与后置
+
+Mocha提供了 `before`, `beforeEach`, `after`, `afterEach` 四个实用的方法，
+能在测试单元执行前进行设置，或是在执行后进行销毁。比如：
+
+```javascript
+describe("start testing", function(){
+    var a,b;
+    before(function(){
+        a = 10; b = 20;
+    });
+    beforeEach(function(){
+        b+=1;
+    });
+    it("should a and b value", function(){
+        assert.equal(a , 10, "check a value");
+        assert.equal(b, 21, "check b value plus 1st time");
+    });
+    it("should b value again", function(){
+        assert.equal(b, 22, "check b value plus 2nd time");
+    });
+});
+```
 
 ---
 
