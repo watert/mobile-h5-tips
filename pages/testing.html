@@ -38,7 +38,7 @@
     <body>
         
         
-    <div class="book" data-level="9" data-basepath=".." data-revision="Fri Sep 18 2015 19:14:12 GMT+0800 (CST)">
+    <div class="book" data-level="9" data-basepath=".." data-revision="Wed Oct 14 2015 16:58:22 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -311,6 +311,60 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="web-js%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E6%8E%A8%E8%8D%90">Web/JS&#x6D4B;&#x8BD5;&#x6846;&#x67B6;&#x63A8;&#x8350;</h1>
+<p>&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x7F16;&#x7A0B;&#x4E2D;&#xFF0C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF08;&#x53C8;&#x79F0;&#x4E3A;&#x6A21;&#x5757;&#x6D4B;&#x8BD5;, Unit Testing&#xFF09;&#x662F;&#x9488;&#x5BF9;&#x7A0B;&#x5E8F;&#x6A21;&#x5757;&#xFF08;&#x8F6F;&#x4EF6;&#x8BBE;&#x8BA1;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#xFF09;&#x6765;&#x8FDB;&#x884C;&#x6B63;&#x786E;&#x6027;&#x68C0;&#x9A8C;&#x7684;&#x6D4B;&#x8BD5;&#x5DE5;&#x4F5C;&#x3002;
+&#x7A0B;&#x5E8F;&#x5355;&#x5143;&#x662F;&#x5E94;&#x7528;&#x7684;&#x6700;&#x5C0F;&#x53EF;&#x6D4B;&#x8BD5;&#x90E8;&#x4EF6;&#x3002;&#x5728;&#x8FC7;&#x7A0B;&#x5316;&#x7F16;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;&#x5355;&#x5143;&#x5C31;&#x662F;&#x5355;&#x4E2A;&#x7A0B;&#x5E8F;&#x3001;&#x51FD;&#x6570;&#x3001;&#x8FC7;&#x7A0B;&#x7B49;&#xFF1B;
+&#x5BF9;&#x4E8E;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#xFF0C;&#x6700;&#x5C0F;&#x5355;&#x5143;&#x5C31;&#x662F;&#x65B9;&#x6CD5;&#xFF0C;&#x5305;&#x62EC;&#x57FA;&#x7C7B;&#xFF08;&#x8D85;&#x7C7B;&#xFF09;&#x3001;&#x62BD;&#x8C61;&#x7C7B;&#x3001;&#x6216;&#x8005;&#x6D3E;&#x751F;&#x7C7B;&#xFF08;&#x5B50;&#x7C7B;&#xFF09;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x7406;&#x60F3;&#x7684;&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;&#x72EC;&#x7ACB;&#x4E8E;&#x5176;&#x5B83;&#x6848;&#x4F8B;&#xFF1B;&#x4E3A;&#x6D4B;&#x8BD5;&#x65F6;&#x9694;&#x79BB;&#x6A21;&#x5757;&#xFF0C;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;stubs&#x3001;mock&#x6216;fake&#x7B49;&#x6D4B;&#x8BD5;&#x9A6C;&#x7532;&#x7A0B;&#x5E8F;&#x3002;
+&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x901A;&#x5E38;&#x7531;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x7F16;&#x5199;&#xFF0C;&#x7528;&#x4E8E;&#x786E;&#x4FDD;&#x4ED6;&#x4EEC;&#x6240;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x7B26;&#x5408;&#x8F6F;&#x4EF6;&#x9700;&#x6C42;&#x548C;&#x9075;&#x5FAA;&#x5F00;&#x53D1;&#x76EE;&#x6807;&#x3002;
+&#x5B83;&#x7684;&#x5B9E;&#x65BD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x662F;&#x975E;&#x5E38;&#x624B;&#x52A8;&#x7684;&#xFF08;&#x901A;&#x8FC7;&#x7EB8;&#x7B14;&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x505A;&#x6210;&#x6784;&#x5EFA;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x76EE;&#x6807;&#xFF1A;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x76EE;&#x6807;&#x662F;&#x9694;&#x79BB;&#x7A0B;&#x5E8F;&#x90E8;&#x4EF6;&#x5E76;&#x8BC1;&#x660E;&#x8FD9;&#x4E9B;&#x5355;&#x4E2A;&#x90E8;&#x4EF6;&#x662F;&#x6B63;&#x786E;&#x7684;&#x3002;
+&#x4E00;&#x4E2A;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x63D0;&#x4F9B;&#x4E86;&#x4EE3;&#x7801;&#x7247;&#x65AD;&#x9700;&#x8981;&#x6EE1;&#x8DB3;&#x7684;&#x4E25;&#x5BC6;&#x7684;&#x4E66;&#x9762;&#x89C4;&#x7EA6;&#x3002;
+&#x56E0;&#x6B64;&#xFF0C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x5E26;&#x6765;&#x4E86;&#x4E00;&#x4E9B;&#x76CA;&#x5904;&#x3002; &#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x5728;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x7684;&#x65E9;&#x671F;&#x5C31;&#x80FD;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x6846;&#x67B6;&#x63A8;&#x8350;&#x4F7F;&#x7528;Jasmine&#x6216;Mochajs&#xFF0C;&#x4ED6;&#x4EEC;&#x90FD;&#x6709;&#x7740;&#x5B8C;&#x5584;&#x7684;&#x6587;&#x6863;&#x4E0E;&#x6210;&#x719F;&#x7684;&#x793E;&#x533A;&#x652F;&#x6301;&#x3002;&#x672C;&#x6587;&#x4E2D;&#x5C06;&#x4EE5;Mochajs&#x4E3A;&#x4F8B;&#x3002;</p>
+<h2 id="%E5%AE%89%E8%A3%85">&#x5B89;&#x88C5;</h2>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B89;&#x88C5;Mochajs&#x4E0E;Chai&#xFF08;Chai&#x662F;&#x4E00;&#x4E2A;BDD/TDD&#x7684;&#x65AD;&#x8A00;&#x5E93;&#xFF0C;Mocha&#x6CA1;&#x6709;&#x5185;&#x5EFA;&#x7684;&#x76F8;&#x5173;&#x652F;&#x6301;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x5E38;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF09;</p>
+<ol>
+<li>&#x6B64;&#x5904;&#x5047;&#x8BBE;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#x4E86;node&#x4E0E;npm&#x73AF;&#x5883;&#xFF0C;&#x5177;&#x4F53;&#x5B89;&#x88C5;&#x65B9;&#x5F0F;&#x67E5;&#x770B;<a href="https://nodejs.org/" target="_blank">Nodejs&#x5B98;&#x7F51;</a></li>
+<li>&#x5168;&#x5C40;&#x5B89;&#x88C5;mocha <code>npm install -g mocha</code></li>
+<li>&#x521D;&#x59CB;&#x5316;mocha&#x76EE;&#x5F55; <code>mocha init test/</code></li>
+<li>&#x5B89;&#x88C5;chai <code>npm install chai --save-dev</code></li>
+<li><p>&#x5728;&#x751F;&#x6210;&#x7684; <code>test/</code> &#x76EE;&#x5F55;&#x4E0B;&#x6DFB;&#x52A0;chai</p>
+<ul>
+<li><p>&#x6D4F;&#x89C8;&#x5668;&#x65B9;&#x5F0F;&#xFF1A;&#x7F16;&#x8F91; <code>test/index.html</code>, &#x5728; <code>mocha.js</code> &#x7684;script&#x6807;&#x7B7E;&#x540E;&#x6DFB;&#x52A0;chai.js:</p>
+<pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;../node_modules/chai/chai.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>  &#x6CE8;&#x610F;node_modules&#x7684;&#x5177;&#x4F53;&#x6240;&#x5728;&#x76EE;&#x5F55;&#xFF0C;&#x5E94;&#x662F;&#x80FD;&#x9759;&#x6001;&#x8BBF;&#x95EE;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x7684;&#x8BDD;&#x5C06;&#x8BE5;&#x6587;&#x4EF6;&#x62F7;&#x5907;&#x51FA;&#x6765;</p>
+</li>
+<li><p>&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;&#x65B9;&#x5F0F;&#xFF1A;&#x7F16;&#x8F91; <code>test/tests.js</code>&#xFF0C; &#x5728;&#x5F00;&#x5934;&#x6DFB;&#x52A0;</p>
+<pre><code class="lang-javascript">  <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">require</span>!=<span class="hljs-string">&quot;undefined&quot;</span> &amp;&amp; !<span class="hljs-built_in">require</span>.amd){
+      <span class="hljs-keyword">var</span> chai = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;chai&quot;</span>);
+  }
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="%E5%BC%80%E5%A7%8B%E6%B5%8B%E8%AF%95">&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;</h2>
+<p>&#x4EE5;&#x4E0A;&#x7684;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728; <code>test/tests.js</code> &#x4E2D;&#x6DFB;&#x52A0;&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;</p>
+<h3 id="%E5%86%99%E4%B8%80%E4%B8%AA%E5%A4%B1%E8%B4%A5%E7%9A%84%E6%A1%88%E4%BE%8B">&#x5199;&#x4E00;&#x4E2A;&#x5931;&#x8D25;&#x7684;&#x6848;&#x4F8B;</h3>
+<p>&#x5728;tests.js&#x4E2D;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> assert = chai.assert;
+describe(<span class="hljs-string">&quot;start testing&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    it(<span class="hljs-string">&quot;should assert fail&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        assert.equal(<span class="hljs-number">1</span>+<span class="hljs-number">1</span> , <span class="hljs-number">3</span>, <span class="hljs-string">&quot;check plus wrong&quot;</span>);
+    });
+});
+</code></pre>
+<p>&#x8BBF;&#x95EE;<code>[your base url]/test/</code>&#x8DEF;&#x5F84;&#xFF0C;&#x5C31;&#x5C06;&#x4F1A;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x3002;</p>
+<p>&#x663E;&#x7136;&#xFF0C;1+1&#x4E0D;&#x7B49;&#x4E8E;3&#xFF0C;&#x4E8E;&#x662F;&#x8BBF;&#x95EE;test&#x9875;&#x9762;&#x4F1A;&#x8FD4;&#x56DE;&#x4EE5;&#x4E0B;&#x9519;&#x8BEF;&#x4FE1;&#x606F;:</p>
+<p><img src="images/testing-1.png" alt="plus wrong"></p>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x76F4;&#x63A5;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre><code class="lang-bash">$ mocha tests.js
+</code></pre>
+<p>&#x5C06;&#x8FD4;&#x56DE;&#x5982;&#x4E0B;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="images/testing-2.png" alt="plus wrong terminal"></p>
+<hr>
+<p>&#x672A;&#x5B8C;&#x5F85;&#x7EED;</p>
 <p><a href="https://github.com/watert/" target="_blank">@watert</a></p>
 
                     

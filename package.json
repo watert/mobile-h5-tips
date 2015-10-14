@@ -4,7 +4,9 @@
   "description": "mobile-h5-tips ============= 移动端 HTML5 优化方案",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "publish": "gulp publish"
   },
   "repository": {
     "type": "git",
