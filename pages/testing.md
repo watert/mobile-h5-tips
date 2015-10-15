@@ -20,9 +20,9 @@ Web/JS测试框架推荐
 首先我们需要安装Mochajs与Chai（Chai是一个BDD/TDD的断言库，Mocha没有内建的相关支持，所以通常一起使用）
 
 1. 此处假设已经准备好了node与npm环境，具体安装方式查看[Nodejs官网](https://nodejs.org/)
-2. 全局安装mocha `npm install -g mocha`
-3. 初始化mocha目录 `mocha init test/`
-4. 安装chai `npm install chai --save-dev`
+2. 全局安装mocha `$ npm install -g mocha`
+3. 初始化mocha目录 `$ mocha init test/`
+4. 安装chai `$ npm install chai --save-dev`
 5. 在生成的 `test/` 目录下添加chai
     - 浏览器方式：编辑 `test/index.html`, 在 `mocha.js` 的script标签后添加chai.js:
         ```html
@@ -86,7 +86,7 @@ assert.equal(1+1 , 2, "check plus wrong");
 ### 测试的前置与后置
 
 Mocha提供了 `before`, `beforeEach`, `after`, `afterEach` 四个实用的方法，
-能在测试单元执行前进行设置，或是在执行后进行销毁。比如：
+能在测试单元执行前进行设置，或是在执行后进行销毁。比如添加下面的代码：
 
 ```javascript
 describe("start testing", function(){
@@ -98,7 +98,7 @@ describe("start testing", function(){
         b+=1;
     });
     it("should a and b value", function(){
-        assert.equal(a , 10, "check a value");
+        assert.equal(a, 10, "check a value");
         assert.equal(b, 21, "check b value plus 1st time");
     });
     it("should b value again", function(){
@@ -107,8 +107,82 @@ describe("start testing", function(){
 });
 ```
 
----
+![plus right](images/testing-4.png)
 
-未完待续
+可以看到，上面的代码全部都会通过。而 `after` 与 `afterEach` 则常用于数据的销毁或重置。
+
+### 异步请求的测试
+
+众所周知 Javascript 中有大量的异步请求，对于这种情况，mocha提供了 `done` 参数传入的功能，
+也提供传入 Promise 进行异步的方法：
+
+```javascript
+describe("async testing", function(){
+    it("should async using `done` method", function(done){
+        setTimeout(function(){
+            assert.equal(1+1,2,"check after .5s");
+            done();
+        }, 500);
+    });
+    it("should async using Promise",function(){
+        return new Promise(function(resolve, reject){
+            setTimeout(function(){
+                assert.equal(1+1,2,"check after .5s");
+                resolve(true);
+            },500);
+        });
+    });
+    it("should fail with Promise",function(){
+        return new Promise(function(resolve, reject){
+            setTimeout(function(){
+                reject("failure");
+            },500);
+        });
+    });
+});
+```
+
+![plus right](images/testing-5.png)
+
+可以看到，两种方式都能正常地执行500ms后的操作，而且执行时长也会在输出中说明（适于定位各类操作的耗时），
+而失败时也会将promise抛出的reject进行说明，这在进行某些ajax操作时尤其实用。
+
+这些测试也都可以在浏览器中直接使用，返回的结果是一致的：
+
+![plus right](images/testing-6.png)
+
+## 一些实用的方法
+
+### 1. 终端中的watch
+
+在终端中使用时，使用 `--watch` (或缩写为`-w`) 参数即可监测代码的改动随时重新执行测试。这对于代码逻辑的调试阶段尤其实用。
+
+```bash
+$ mocha tests.js --watch
+```
+
+### 2. 查看当前关注的测试组
+
+Mocha提供了grep方法，可以进行测试describe组的筛选。
+
+在浏览器中可以点击相应的组名，则会自动地进行相应操作，grep的参数值会在url中有所体现。
+
+![plus right](images/testing-7.png)
+
+而在命令行中则需要自己输入，Grep的参数基于字符串：
+
+```bash
+mocha tests.js --grep="async testing"
+```
+
+返回结果：
+
+![plus right](images/testing-8.png)
+
+## 更多信息
+
+* 关于mochajs的更多信息可以查看[mochajs的文档](https://mochajs.org/)
+* 关于chai的用法参阅[chai的API文档](http://chaijs.com/api/)
+* 希望在终端中模拟浏览器中的行为可以使用[mocha-phantomjs](https://github.com/nathanboktae/mocha-phantomjs)
 
 [@watert](https://github.com/watert/)
