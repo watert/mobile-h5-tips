@@ -38,7 +38,7 @@
     <body>
         
         
-    <div class="book" data-level="9" data-basepath=".." data-revision="Wed Oct 14 2015 16:58:22 GMT+0800 (CST)">
+    <div class="book" data-level="9" data-basepath=".." data-revision="Thu Oct 15 2015 10:25:38 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -325,9 +325,9 @@
 <p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B89;&#x88C5;Mochajs&#x4E0E;Chai&#xFF08;Chai&#x662F;&#x4E00;&#x4E2A;BDD/TDD&#x7684;&#x65AD;&#x8A00;&#x5E93;&#xFF0C;Mocha&#x6CA1;&#x6709;&#x5185;&#x5EFA;&#x7684;&#x76F8;&#x5173;&#x652F;&#x6301;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x5E38;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF09;</p>
 <ol>
 <li>&#x6B64;&#x5904;&#x5047;&#x8BBE;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x597D;&#x4E86;node&#x4E0E;npm&#x73AF;&#x5883;&#xFF0C;&#x5177;&#x4F53;&#x5B89;&#x88C5;&#x65B9;&#x5F0F;&#x67E5;&#x770B;<a href="https://nodejs.org/" target="_blank">Nodejs&#x5B98;&#x7F51;</a></li>
-<li>&#x5168;&#x5C40;&#x5B89;&#x88C5;mocha <code>npm install -g mocha</code></li>
-<li>&#x521D;&#x59CB;&#x5316;mocha&#x76EE;&#x5F55; <code>mocha init test/</code></li>
-<li>&#x5B89;&#x88C5;chai <code>npm install chai --save-dev</code></li>
+<li>&#x5168;&#x5C40;&#x5B89;&#x88C5;mocha <code>$ npm install -g mocha</code></li>
+<li>&#x521D;&#x59CB;&#x5316;mocha&#x76EE;&#x5F55; <code>$ mocha init test/</code></li>
+<li>&#x5B89;&#x88C5;chai <code>$ npm install chai --save-dev</code></li>
 <li><p>&#x5728;&#x751F;&#x6210;&#x7684; <code>test/</code> &#x76EE;&#x5F55;&#x4E0B;&#x6DFB;&#x52A0;chai</p>
 <ul>
 <li><p>&#x6D4F;&#x89C8;&#x5668;&#x65B9;&#x5F0F;&#xFF1A;&#x7F16;&#x8F91; <code>test/index.html</code>, &#x5728; <code>mocha.js</code> &#x7684;script&#x6807;&#x7B7E;&#x540E;&#x6DFB;&#x52A0;chai.js:</p>
@@ -346,7 +346,7 @@
 </ol>
 <h2 id="%E5%BC%80%E5%A7%8B%E6%B5%8B%E8%AF%95">&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;</h2>
 <p>&#x4EE5;&#x4E0A;&#x7684;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728; <code>test/tests.js</code> &#x4E2D;&#x6DFB;&#x52A0;&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;</p>
-<h3 id="%E5%86%99%E4%B8%80%E4%B8%AA%E5%A4%B1%E8%B4%A5%E7%9A%84%E6%A1%88%E4%BE%8B">&#x5199;&#x4E00;&#x4E2A;&#x5931;&#x8D25;&#x7684;&#x6848;&#x4F8B;</h3>
+<h3 id="%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%8D%95%E5%85%83%E5%BC%80%E5%A7%8B">&#x4ECE;&#x4E00;&#x4E2A;&#x5931;&#x8D25;&#x7684;&#x5355;&#x5143;&#x5F00;&#x59CB;</h3>
 <p>&#x5728;tests.js&#x4E2D;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> assert = chai.assert;
 describe(<span class="hljs-string">&quot;start testing&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
@@ -363,8 +363,85 @@ describe(<span class="hljs-string">&quot;start testing&quot;</span>, <span class
 </code></pre>
 <p>&#x5C06;&#x8FD4;&#x56DE;&#x5982;&#x4E0B;&#x7ED3;&#x679C;&#xFF1A;</p>
 <p><img src="images/testing-2.png" alt="plus wrong terminal"></p>
-<hr>
-<p>&#x672A;&#x5B8C;&#x5F85;&#x7EED;</p>
+<p>&#x800C;&#x5F53;&#x6211;&#x4EEC;&#x5C06;&#x6D4B;&#x8BD5;&#x7684;&#x503C;&#x4FEE;&#x6539;&#x4E3A;&#x6B63;&#x786E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6D4B;&#x8BD5;&#x5C31;&#x5C06;&#x901A;&#x8FC7;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-javascript">assert.equal(<span class="hljs-number">1</span>+<span class="hljs-number">1</span> , <span class="hljs-number">2</span>, <span class="hljs-string">&quot;check plus wrong&quot;</span>);
+</code></pre>
+<p>&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<p><img src="images/testing-3.png" alt="plus right"></p>
+<h3 id="%E6%B5%8B%E8%AF%95%E7%9A%84%E5%89%8D%E7%BD%AE%E4%B8%8E%E5%90%8E%E7%BD%AE">&#x6D4B;&#x8BD5;&#x7684;&#x524D;&#x7F6E;&#x4E0E;&#x540E;&#x7F6E;</h3>
+<p>Mocha&#x63D0;&#x4F9B;&#x4E86; <code>before</code>, <code>beforeEach</code>, <code>after</code>, <code>afterEach</code> &#x56DB;&#x4E2A;&#x5B9E;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;
+&#x80FD;&#x5728;&#x6D4B;&#x8BD5;&#x5355;&#x5143;&#x6267;&#x884C;&#x524D;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF0C;&#x6216;&#x662F;&#x5728;&#x6267;&#x884C;&#x540E;&#x8FDB;&#x884C;&#x9500;&#x6BC1;&#x3002;&#x6BD4;&#x5982;&#x6DFB;&#x52A0;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-javascript">describe(<span class="hljs-string">&quot;start testing&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span> a,b;
+    before(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        a = <span class="hljs-number">10</span>; b = <span class="hljs-number">20</span>;
+    });
+    beforeEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        b+=<span class="hljs-number">1</span>;
+    });
+    it(<span class="hljs-string">&quot;should a and b value&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        assert.equal(a, <span class="hljs-number">10</span>, <span class="hljs-string">&quot;check a value&quot;</span>);
+        assert.equal(b, <span class="hljs-number">21</span>, <span class="hljs-string">&quot;check b value plus 1st time&quot;</span>);
+    });
+    it(<span class="hljs-string">&quot;should b value again&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        assert.equal(b, <span class="hljs-number">22</span>, <span class="hljs-string">&quot;check b value plus 2nd time&quot;</span>);
+    });
+});
+</code></pre>
+<p><img src="images/testing-4.png" alt="plus right"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5168;&#x90E8;&#x90FD;&#x4F1A;&#x901A;&#x8FC7;&#x3002;&#x800C; <code>after</code> &#x4E0E; <code>afterEach</code> &#x5219;&#x5E38;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x9500;&#x6BC1;&#x6216;&#x91CD;&#x7F6E;&#x3002;</p>
+<h3 id="%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%E7%9A%84%E6%B5%8B%E8%AF%95">&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x6D4B;&#x8BD5;</h3>
+<p>&#x4F17;&#x6240;&#x5468;&#x77E5; Javascript &#x4E2D;&#x6709;&#x5927;&#x91CF;&#x7684;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;mocha&#x63D0;&#x4F9B;&#x4E86; <code>done</code> &#x53C2;&#x6570;&#x4F20;&#x5165;&#x7684;&#x529F;&#x80FD;&#xFF0C;
+&#x4E5F;&#x63D0;&#x4F9B;&#x4F20;&#x5165; Promise &#x8FDB;&#x884C;&#x5F02;&#x6B65;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">describe(<span class="hljs-string">&quot;async testing&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    it(<span class="hljs-string">&quot;should async using `done` method&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>)</span>{
+        setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            assert.equal(<span class="hljs-number">1</span>+<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-string">&quot;check after .5s&quot;</span>);
+            done();
+        }, <span class="hljs-number">500</span>);
+    });
+    it(<span class="hljs-string">&quot;should async using Promise&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)</span>{
+            setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                assert.equal(<span class="hljs-number">1</span>+<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-string">&quot;check after .5s&quot;</span>);
+                resolve(<span class="hljs-literal">true</span>);
+            },<span class="hljs-number">500</span>);
+        });
+    });
+    it(<span class="hljs-string">&quot;should fail with Promise&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>)</span>{
+            setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                reject(<span class="hljs-string">&quot;failure&quot;</span>);
+            },<span class="hljs-number">500</span>);
+        });
+    });
+});
+</code></pre>
+<p><img src="images/testing-5.png" alt="plus right"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x5730;&#x6267;&#x884C;500ms&#x540E;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E14;&#x6267;&#x884C;&#x65F6;&#x957F;&#x4E5F;&#x4F1A;&#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x8BF4;&#x660E;&#xFF08;&#x9002;&#x4E8E;&#x5B9A;&#x4F4D;&#x5404;&#x7C7B;&#x64CD;&#x4F5C;&#x7684;&#x8017;&#x65F6;&#xFF09;&#xFF0C;
+&#x800C;&#x5931;&#x8D25;&#x65F6;&#x4E5F;&#x4F1A;&#x5C06;promise&#x629B;&#x51FA;&#x7684;reject&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#xFF0C;&#x8FD9;&#x5728;&#x8FDB;&#x884C;&#x67D0;&#x4E9B;ajax&#x64CD;&#x4F5C;&#x65F6;&#x5C24;&#x5176;&#x5B9E;&#x7528;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x6D4B;&#x8BD5;&#x4E5F;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF1A;</p>
+<p><img src="images/testing-6.png" alt="plus right"></p>
+<h2 id="%E4%B8%80%E4%BA%9B%E5%AE%9E%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95">&#x4E00;&#x4E9B;&#x5B9E;&#x7528;&#x7684;&#x65B9;&#x6CD5;</h2>
+<h3 id="1-%E7%BB%88%E7%AB%AF%E4%B8%AD%E7%9A%84watch">1. &#x7EC8;&#x7AEF;&#x4E2D;&#x7684;watch</h3>
+<p>&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x4F7F;&#x7528; <code>--watch</code> (&#x6216;&#x7F29;&#x5199;&#x4E3A;<code>-w</code>) &#x53C2;&#x6570;&#x5373;&#x53EF;&#x76D1;&#x6D4B;&#x4EE3;&#x7801;&#x7684;&#x6539;&#x52A8;&#x968F;&#x65F6;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x8FD9;&#x5BF9;&#x4E8E;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x7684;&#x8C03;&#x8BD5;&#x9636;&#x6BB5;&#x5C24;&#x5176;&#x5B9E;&#x7528;&#x3002;</p>
+<pre><code class="lang-bash">$ mocha tests.js --watch
+</code></pre>
+<h3 id="2-%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E5%85%B3%E6%B3%A8%E7%9A%84%E6%B5%8B%E8%AF%95%E7%BB%84">2. &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5173;&#x6CE8;&#x7684;&#x6D4B;&#x8BD5;&#x7EC4;</h3>
+<p>Mocha&#x63D0;&#x4F9B;&#x4E86;grep&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;describe&#x7EC4;&#x7684;&#x7B5B;&#x9009;&#x3002;</p>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x76F8;&#x5E94;&#x7684;&#x7EC4;&#x540D;&#xFF0C;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x5730;&#x8FDB;&#x884C;&#x76F8;&#x5E94;&#x64CD;&#x4F5C;&#xFF0C;grep&#x7684;&#x53C2;&#x6570;&#x503C;&#x4F1A;&#x5728;url&#x4E2D;&#x6709;&#x6240;&#x4F53;&#x73B0;&#x3002;</p>
+<p><img src="images/testing-7.png" alt="plus right"></p>
+<p>&#x800C;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x5219;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x8F93;&#x5165;&#xFF0C;Grep&#x7684;&#x53C2;&#x6570;&#x57FA;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code class="lang-bash">mocha tests.js --grep=<span class="hljs-string">&quot;async testing&quot;</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="images/testing-8.png" alt="plus right"></p>
+<h2 id="%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF">&#x66F4;&#x591A;&#x4FE1;&#x606F;</h2>
+<ul>
+<li>&#x5173;&#x4E8E;mochajs&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x67E5;&#x770B;<a href="https://mochajs.org/" target="_blank">mochajs&#x7684;&#x6587;&#x6863;</a></li>
+<li>&#x5173;&#x4E8E;chai&#x7684;&#x7528;&#x6CD5;&#x53C2;&#x9605;<a href="http://chaijs.com/api/" target="_blank">chai&#x7684;API&#x6587;&#x6863;</a></li>
+<li>&#x5E0C;&#x671B;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x6A21;&#x62DF;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;&#x884C;&#x4E3A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="https://github.com/nathanboktae/mocha-phantomjs" target="_blank">mocha-phantomjs</a></li>
+</ul>
 <p><a href="https://github.com/watert/" target="_blank">@watert</a></p>
 
                     
