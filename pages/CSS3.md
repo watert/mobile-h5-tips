@@ -13,6 +13,7 @@ transition是简写属性，有以下四个属性值：
 
 ```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
+    
     伪css：
     div {
         transition: <property> <duration> <timing-function> <delay>;
@@ -66,6 +67,9 @@ border-radius 用来设置边框圆角。当使用一个半径时确定一个圆
 这是一个简写属性，用来设置 border-top-left-radius, border-top-right-radius, border-bottom-right-radius ，border-bottom-left-radius。
 和其他简写属性类似，无法为个别值设定为继承，如 border-radius:0 0 inherit inherit，这会覆盖一部分现有定义。在这种情况下只能使用完整属性来指定。
 
+<pre style="display: inline-block; margin: 10px; border: solid 10px; border-radius: 10px 40px 40px 10px;" class=" language-html" data-number=""><code class=" language-html">border: solid 10px;
+  /* the border will curve into a 'D' */  
+  border-radius: 10px 40px 40px 10px;<div class="line-number" data-start="1" style="top: 0px;"></div><div class="line-number" data-start="2" style="top: 19px;"></div><div class="line-number" data-start="3" style="top: 38px;"></div></code></pre>
 ## box-shadow
 
 ## text-outline
