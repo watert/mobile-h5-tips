@@ -94,6 +94,24 @@ border-radius: inherit
 
 ![border-radius-compatibility](images/css3-5.png)
 
+####注意css的书写顺序
+
+```css
+	  #wrongway { 
+	    border-radius: 30px 10px;
+	    -webkit-border-radius: 30px 10px;
+	  }
+	  #rightway { 
+	    -webkit-border-radius: 30px 10px;
+	    border-radius: 30px 10px;
+	  }
+```
+
+![border-radius-writing-order](images/css3-6.png)
+
+无前缀写法(border-radius)，是让box左上角和右下角为30像素圆弧，左下角和右上是10像素圆弧。
+webkit前缀写法(-webkit-border-radius)，则让box渲染为每个角都是30像素宽10像素高的圆弧。
+
 ## box-shadow
 
 ## text-outline
