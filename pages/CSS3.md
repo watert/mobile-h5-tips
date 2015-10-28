@@ -51,13 +51,18 @@
 - transition是一次性的，不能重复发生，除非一再触发，请使用animation。
 - transition只能定义开始状态和结束状态，不能定义中间状态，也就是说只有两个状态。CSS的animation可以解决这个问题，能够指定动画的多个中间状态。
 
-## transtion
+##animation
 
 ## border-radius
-
+>border-radius 用来设置边框圆角。当使用一个半径时确定一个圆形；当使用两个半径时确定一个椭圆，这个(椭)圆与边框的交集形成圆角效果。
+![border-radius-show](images/css3-3.png)
+这是一个简写属性，用来设置 border-top-left-radius, border-top-right-radius, border-bottom-right-radius ，border-bottom-left-radius。
+和其他简写属性类似，无法为个别值设定为继承，如 border-radius:0 0 inherit inherit，这会覆盖一部分现有定义。在这种情况下只能使用完整属性来指定。
 ## box-shadow
 
-## text-outline&text-shadow
+## text-outline
+
+##text-shadow
 
 ## multiple backgrounds
 
@@ -66,9 +71,6 @@
 ## text-overflow
 
 ## Flexible Box Model
-
-## css write order
-border-radius属性被重写
 
 =============
 [@bryan](https://github.com/saviroyu)
