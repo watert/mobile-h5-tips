@@ -31,12 +31,13 @@
     - transition-delay与transition-duration的值都是时间，所以要区分它们在连写中的位置，一般浏览器会根据先后顺序决定，transition-duration | transition-delay；
     
 #### 相关事件
-> 检测过渡是否完成，在符合标准的浏览器下，这个事件是 transitionend, 在 WebKit 下是 webkitTransitionEnd。
+> 
+检测过渡是否完成，在符合标准的浏览器下，这个事件是 transitionend, 在 WebKit 下是 webkitTransitionEnd。
 - propertyName: 字符串，指示已完成过渡的属性。
 - elapsedTime: 浮点数，指示当触发这个事件时过渡已运行的时间（秒）。这个值不受 transition-delay 影响。
 - 如果取消了过渡则不会触发 transitionend 事件。
-- 
-#### 使用注意：
+
+#### 注意事项：
 >
 - 目前，各大浏览器（包括IE 10）都已经支持无前缀的transition，所以transition已经可以很安全地不加浏览器前缀。兼容性表格如下：
 ![compatibility](images/css3-1.png)
