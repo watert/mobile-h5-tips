@@ -10,9 +10,9 @@ CSS 过渡（transition）, 是 CSS3 规范的一部分,可以让属性的变化
 #### 语法：
 transition是简写属性，有以下四个属性值：
 
-	```
+```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
-    ```
+```
     
 > 执行变换的属性：transition-property,
 > 变换延续的时间：transition-duration,
