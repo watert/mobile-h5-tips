@@ -23,13 +23,13 @@
 - transition-duration：变换持续的时间
 - transition-timing-function：在延续时间段，变换的速率变化
     - 可用属性 ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(number, number, number, number)
-    
     ![transition-timing-function](images/css3-2.png)
     - cubic-bezier为通过贝赛尔曲线来计算“转换”过程中的属性值
 - transition-delay：变换延迟时间
     - 当改变元素属性值后多长时间开始执行transition效果
     - 改变多个css属性的transition效果，可以有各自不同的延续时间和其时间的速率变换方式；
     - transition-delay与transition-duration的值都是时间，所以要区分它们在连写中的位置，一般浏览器会根据先后顺序决定，transition-duration | transition-delay；
+    
 #### 相关事件
 > 检测过渡是否完成，在符合标准的浏览器下，这个事件是 transitionend, 在 WebKit 下是 webkitTransitionEnd。
 - propertyName: 字符串，指示已完成过渡的属性。
