@@ -8,14 +8,15 @@
 > 过渡可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay), 持续多久 (设置 duration) 以及如何动画 (定义timing函数，比如匀速地或先快后慢)。
 
 #### 语法：
-> transition是简写属性，有以下四个属性值：
-    ```
+> 
+transition是简写属性，有以下四个属性值：
+```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
     伪css：
     div {
         transition: <property> <duration> <timing-function> <delay>;
     }
-    ```
+```
 
 >- transition-property：执行变换的属性
     - 当其值为none时，transition马上停止执行
