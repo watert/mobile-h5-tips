@@ -109,8 +109,13 @@ border-radius: inherit
 
 ![border-radius-writing-order](images/css3-6.png)
 
+如果浏览器支持不同前缀的写法，就会产生样式重写。
+
 无前缀写法(border-radius)，是让box左上角和右下角为30像素圆弧，左下角和右上是10像素圆弧。
+
 webkit前缀写法(-webkit-border-radius)，则让box渲染为每个角都是30像素宽10像素高的圆弧。
+
+CSS3中的background-image 渐变貌似也有同样的遭遇
 
 ## box-shadow
 
