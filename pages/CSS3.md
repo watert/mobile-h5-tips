@@ -67,9 +67,23 @@ border-radius 用来设置边框圆角。当使用一个半径时确定一个圆
 这是一个简写属性，用来设置 border-top-left-radius, border-top-right-radius, border-bottom-right-radius ，border-bottom-left-radius。
 和其他简写属性类似，无法为个别值设定为继承，如 border-radius:0 0 inherit inherit，这会覆盖一部分现有定义。在这种情况下只能使用完整属性来指定。
 
-<pre style="display: inline-block; margin: 10px; border: solid 10px; border-radius: 10px 40px 40px 10px;" class=" language-html" data-number=""><code class=" language-html">border: solid 10px;
-  /* the border will curve into a 'D' */  
-  border-radius: 10px 40px 40px 10px;<div class="line-number" data-start="1" style="top: 0px;"></div><div class="line-number" data-start="2" style="top: 19px;"></div><div class="line-number" data-start="3" style="top: 38px;"></div></code></pre>
+```
+Formal syntax: [ <length> | <percentage> ]{1,4} [ / [ <length> | <percentage> ]{1,4} ]?
+半径的第一个语法取值可取1~4个值:
+border-radius: radius             
+border-radius: top-left-and-bottom-right top-right-and-bottom-left 
+border-radius: top-left top-right-and-bottom-left bottom-right 
+border-radius: top-left top-right bottom-right bottom-left 
+
+半径的第二个语法取值也可取1~4个值
+border-radius: (first radius values) / radius             
+border-radius: (first radius values) / top-left-and-bottom-right top-right-and-bottom-left 
+border-radius: (first radius values) / top-left top-right-and-bottom-left bottom-right 
+border-radius: (first radius values) / top-left top-right bottom-right bottom-left 
+
+border-radius: inherit
+```
+
 ## box-shadow
 
 ## text-outline
