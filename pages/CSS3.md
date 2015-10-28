@@ -12,13 +12,11 @@ transition是简写属性，有以下四个属性值：
 
 	```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
-     ```
-
-transition主要包含四个属性值：
-	执行变换的属性：transition-property,
+    执行变换的属性：transition-property,
 	变换延续的时间：transition-duration,
 	在延续时间段，变换的速率变化transition-timing-function,
 	变换延迟时间transition-delay。
+     ```
 
 #### 使用注意：
  - 目前，各大浏览器（包括IE 10）都已经支持无前缀的transition，不过鉴于标准刚刚稳定，对于基于 Webkit的浏览器仍然需要厂商前缀。兼容性表格如下：
