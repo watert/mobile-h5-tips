@@ -9,9 +9,7 @@ CSS 过渡（transition）, 是 CSS3 规范的一部分,可以让属性的变化
 ### 使用注意：
 1. 目前，各大浏览器（包括IE 10）都已经支持无前缀的transition，不过鉴于标准刚刚稳定，对于基于 Webkit的浏览器仍然需要厂商前缀。
 
-|_. ID |_.表名 |
-| 1 | 项目1 |
-| 2 | 项目2 |
+![plus right](images/css3-1.png)
 
 2. 不是所有的CSS属性都支持transition，完整的列表查看这里，以及具体的效果。
 3. transition需要明确知道，开始状态和结束状态的具体数值，才能计算出中间状态。比如，height从0px变化到100px，transition可以算出中间状态。但是，transition没法算出0px到auto的中间状态，也就是说，如果开始或结束的设置是height: auto，那么就不会产生动画效果。类似的情况还有，display: none到block，background: url(foo.jpg)到url(bar.jpg)等等。
