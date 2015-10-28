@@ -65,6 +65,7 @@ border-radius 用来设置边框圆角。当使用一个半径时确定一个圆
 ![border-radius-show](images/css3-3.png)
 
 这是一个简写属性，用来设置 border-top-left-radius, border-top-right-radius, border-bottom-right-radius ，border-bottom-left-radius。
+
 和其他简写属性类似，无法为个别值设定为继承，如 border-radius:0 0 inherit inherit，这会覆盖一部分现有定义。在这种情况下只能使用完整属性来指定。
 
 ####语法
@@ -109,7 +110,7 @@ border-radius: inherit
 
 ![border-radius-writing-order](images/css3-6.png)
 
-如果浏览器支持不同前缀的写法，就会产生样式重写。
+如果浏览器支持不同前缀的写法，就会产生样式重写。webkit核心的浏览器不仅支持border-radius属性，也支持-webkit-border-radius属性，所以产生了以上问题。
 
 无前缀写法(border-radius)，是让box左上角和右下角为30像素圆弧，左下角和右上是10像素圆弧。
 
