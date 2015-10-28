@@ -8,10 +8,8 @@
 > 过渡可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay), 持续多久 (设置 duration) 以及如何动画 (定义timing函数，比如匀速地或先快后慢)。
 
 #### 语法：
-> 
-transition是简写属性，有以下四个属性值：
-
-```
+> transition是简写属性，有以下四个属性值：
+>```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
     伪css：
     div {
@@ -24,14 +22,11 @@ transition是简写属性，有以下四个属性值：
     - 当其值为none时，transition马上停止执行
     - 当指定为all时，则元素产生任何属性值变化时都将执行transition效果
     - ident是可以指定元素的某一个属性值。其对应的类型：color(background-color,border-color,color等),length(width,height,top,padding,margin等)和transform等
-
 - transition-duration：变换持续的时间
-
 - transition-timing-function：在延续时间段，变换的速率变化
     - 可用属性: `ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>)`
     ![transition-timing-function](images/css3-2.png)
     - cubic-bezier为通过贝赛尔曲线来计算“转换”过程中的属性值
-
 - transition-delay：变换延迟时间
     - 当改变元素属性值后多长时间开始执行transition效果
     - 改变多个css属性的transition效果，可以有各自不同的延续时间和其时间的速率变换方式；
