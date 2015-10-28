@@ -1,11 +1,11 @@
 #CSS3新功能推荐及优化	
 =============
 ## transtion
-CSS 过渡（transition）, 是 CSS3 规范的一部分,可以让属性的变化过程持续一段时间，而不是立即生效，将按一个曲线速率变化，这个过程是可以自定义。比如，将元素的高度从0%变为100%，将元素的颜色由白色变为黑色等。
+>CSS 过渡（transition）, 是 CSS3 规范的一部分,可以让属性的变化过程持续一段时间，而不是立即生效，将按一个曲线速率变化，这个过程是可以自定义。比如，将元素的高度从0%变为100%，将元素的颜色由白色变为黑色等。
 
-通常将两个状态之间的过渡称为隐式过渡 implicit transitions ，因为开始与结束之间的状态由浏览器自行决定。
+>通常将两个状态之间的过渡称为隐式过渡 implicit transitions ，因为开始与结束之间的状态由浏览器自行决定。
 
-过渡可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay), 持续多久 (设置 duration) 以及如何动画 (定义timing函数，比如匀速地或先快后慢)。
+>过渡可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay), 持续多久 (设置 duration) 以及如何动画 (定义timing函数，比如匀速地或先快后慢)。
 
 #### 语法：
 transition是简写属性，有以下四个属性值：
@@ -14,10 +14,11 @@ transition是简写属性，有以下四个属性值：
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
 ```
     
-> 执行变换的属性：transition-property,
-> 变换延续的时间：transition-duration,
-> 在延续时间段，变换的速率变化transition-timing-function,
-> 变换延迟时间transition-delay。
+> 
+- 执行变换的属性：transition-property,
+- 变换延续的时间：transition-duration,
+- 在延续时间段，变换的速率变化transition-timing-function,
+- 变换延迟时间transition-delay。
 
 #### 使用注意：
  - 目前，各大浏览器（包括IE 10）都已经支持无前缀的transition，不过鉴于标准刚刚稳定，对于基于 Webkit的浏览器仍然需要厂商前缀。兼容性表格如下：
