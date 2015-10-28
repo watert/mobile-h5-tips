@@ -69,6 +69,7 @@ border-radius 用来设置边框圆角。当使用一个半径时确定一个圆
 
 ```
 Formal syntax: [ <length> | <percentage> ]{1,4} [ / [ <length> | <percentage> ]{1,4} ]?
+
 半径的第一个语法取值可取1~4个值:
 border-radius: radius             
 border-radius: top-left-and-bottom-right top-right-and-bottom-left 
@@ -83,6 +84,12 @@ border-radius: (first radius values) / top-left top-right bottom-right bottom-le
 
 border-radius: inherit
 ```
+
+<table>
+    <tr>
+        <td>Foo</td>
+    </tr>
+</table>
 
 ## box-shadow
 
