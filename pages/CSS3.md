@@ -13,8 +13,7 @@
 ```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
 ```
-    
-> 
+
 - transition-property：执行变换的属性
 - transition-duration：变换延续的时间
 - transition-timing-function：在延续时间段，变换的速率变化
