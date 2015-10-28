@@ -11,6 +11,10 @@
 > transition是简写属性，有以下四个属性值：
 ```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
+    伪css：
+    div {
+        transition: <property> <duration> <timing-function> <delay>;
+    }
 ```
 - transition-property：执行变换的属性
     - 当其值为none时，transition马上停止执行
@@ -26,7 +30,12 @@
     - 当改变元素属性值后多长时间开始执行transition效果
     - 改变多个css属性的transition效果，可以有各自不同的延续时间和其时间的速率变换方式；
     - transition-delay与transition-duration的值都是时间，所以要区分它们在连写中的位置，一般浏览器会根据先后顺序决定，transition-duration | transition-delay；
-
+#### 相关事件
+> 检测过渡是否完成，在符合标准的浏览器下，这个事件是 transitionend, 在 WebKit 下是 webkitTransitionEnd。
+- propertyName: 字符串，指示已完成过渡的属性。
+- elapsedTime: 浮点数，指示当触发这个事件时过渡已运行的时间（秒）。这个值不受 transition-delay 影响。
+- 如果取消了过渡则不会触发 transitionend 事件。
+- 
 #### 使用注意：
 >
 - 目前，各大浏览器（包括IE 10）都已经支持无前缀的transition，所以transition已经可以很安全地不加浏览器前缀。兼容性表格如下：
