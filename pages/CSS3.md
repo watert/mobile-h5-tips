@@ -13,6 +13,7 @@ transition是简写属性，有以下四个属性值：
 	```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
     ```
+    
     > 执行变换的属性：transition-property,
 	> 变换延续的时间：transition-duration,
 	> 在延续时间段，变换的速率变化transition-timing-function,
