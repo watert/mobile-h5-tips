@@ -67,6 +67,7 @@ border-radius 用来设置边框圆角。当使用一个半径时确定一个圆
 这是一个简写属性，用来设置 border-top-left-radius, border-top-right-radius, border-bottom-right-radius ，border-bottom-left-radius。
 和其他简写属性类似，无法为个别值设定为继承，如 border-radius:0 0 inherit inherit，这会覆盖一部分现有定义。在这种情况下只能使用完整属性来指定。
 
+####语法
 ```
 Formal syntax: [ <length> | <percentage> ]{1,4} [ / [ <length> | <percentage> ]{1,4} ]?
 
@@ -85,11 +86,13 @@ border-radius: (first radius values) / top-left top-right bottom-right bottom-le
 border-radius: inherit
 ```
 
-<table>
-    <tr>
-        <td>Foo</td>
-    </tr>
-</table>
+####属性值
+
+![border-radius-property](images/css3-4.png)
+
+####兼容性
+
+![border-radius-compatibility](images/css3-5.png)
 
 ## box-shadow
 
