@@ -18,7 +18,8 @@
     - ident是可以指定元素的某一个属性值。其对应的类型：color(background-color,border-color,color等), length(width,height,top,padding,margin等)和transform等
 - transition-duration：变换持续的时间
 - transition-timing-function：在延续时间段，变换的速率变化
-    - 可用属性 ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>)
+    - 可用属性 ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(number, number, number, number)
+    
     ![transition-timing-function](images/css3-2.png)
     - cubic-bezier为通过贝赛尔曲线来计算“转换”过程中的属性值
 - transition-delay：变换延迟时间
