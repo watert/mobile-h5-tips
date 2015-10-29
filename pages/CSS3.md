@@ -1,4 +1,4 @@
-#CSS3新功能推荐及优化
+#CSS3功能推荐及优化
 
 ## border-radius
 border-radius 用来设置边框圆角。当使用一个半径时确定一个圆形；当使用两个半径时确定一个椭圆，这个(椭)圆与边框的交集形成圆角效果。
@@ -181,7 +181,7 @@ text-overflow 属性用于决定溢出的内容以何种形式提醒用户。它
 [Here](http://caniuse.com/#search=text-overflow)
 
 ## opacity
-透明opacity也可以使用rgba来实现，通常实现遮罩效果。
+透明opacity也可以使用rgba来实现。
 ```
 {
     background-color:#000;
@@ -193,6 +193,10 @@ text-overflow 属性用于决定溢出的内容以何种形式提醒用户。它
     opacity:0.6;
 }
 ```
+
+####使用建议
+- 浏览器的某些组件无法满足UI效果时，可以将组件隐藏，比如说select，input[file]等
+- 错误提示和微信分享等半透明的遮罩层；
 
 ## transform
 transform 属性允许你修改CSS可视化模型的坐标控件。使用transform，元素可以按照设定的值变形、旋转、缩放、倾斜，即向元素进行2D和3D转换。与transition结合就可以实现很多CSS3动画。
@@ -239,6 +243,12 @@ div
     -moz-transform: scale(2,4);	/* Firefox */
     transform: scale(2,4);
 }
+```
+#### 优化建议
+- 使用CSS 3D加速，-webkit-transform:transition3d和-webkit-transform:translateZ为了渲染3D样式，但我们设置值为0后，并没有真正使用3D效果，但浏览器却因此开启了GPU硬件加速模式。
+
+```
+transform: rotateZ(-180deg) translate3D(0,0,0);
 ```
 
 ## transition
@@ -294,6 +304,7 @@ transition是简写属性，有以下四个属性值：
 - 不是所有的CSS属性都支持transition，完整的列表查看[这里](http://oli.jp/2010/css-animatable-properties/)，以及具体的效果。
 - transition需要明确知道，开始状态和结束状态的具体数值，才能计算出中间状态。比如，height从0px变化到100px，transition可以算出中间状态。但是，transition没法算出0px到auto的中间状态，也就是说，如果开始或结束的设置是height: auto，那么就不会产生动画效果。类似的情况还有，display: none到block，background: url(foo.jpg)到url(bar.jpg)等等。
 - 同时应当留意这种情形，在插入元素（如 .appendChild()）或改变属性 display: none 后立即使用过渡, 元素将视为没有开始状态，始终处于结束状态。简单的解决办法，改变属性前用 window.setTimeout() 延迟几毫秒。
+- 如果发现过渡效果不顺畅，可以尝试使用setTimeout延迟改变元素的CSS属性（比如使用增减class来改变CSS属性的情况）。
 
 #### 局限：
 transition的优点在于简单易用，但是它有几个很大的局限。
