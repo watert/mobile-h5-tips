@@ -13,7 +13,8 @@ transition是简写属性，有以下四个属性值：
 
 ```
     transition ： [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*
-    
+```
+```
     伪css：
     div {
         transition: <property> <duration> <timing-function> <delay>;
@@ -26,7 +27,8 @@ transition是简写属性，有以下四个属性值：
     - ident是可以指定元素的某一个属性值。其对应的类型：color(background-color,border-color,color等),length(width,height,top,padding,margin等)和transform等
 - transition-duration：变换持续的时间
 - transition-timing-function：在延续时间段，变换的速率变化
-    - 可用属性: `ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>)`
+    - 可用属性: 
+    `ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>)`
     
     ![transition-timing-function](images/css3-2.png)
 
@@ -119,14 +121,115 @@ webkit前缀写法(-webkit-border-radius)，则让box渲染为每个角都是30�
 CSS3中的background-image 渐变貌似也有同样的遭遇
 
 ## box-shadow
+box-shadow 以逗号分割列表来描述一个或多个阴影效果，可以用到几乎任何元素上。如果元素同时设置了border-radius，阴影也会有圆角效果。多个阴影的z-ordering 和多个text shadows规则相同（第一个阴影在最上面）。
 
-## text-outline
+box-shadow是少有的几个可以省略前缀的CSS3属性，类似的还有box-shadow。不过遗憾的是，暂时移动端只有iOS支持，android是否可以用滤镜或其他方式实现有待进一步研究，见下面的兼容性表。
 
-##text-shadow
+####语法
+```
+none | [inset? && [ <offset-x> <offset-y> <blur-radius>? <spread-radius>? <color>? ] ]#
+```
+
+```
+/* offset-x | offset-y | color */
+box-shadow: 60px -16px teal;
+
+/* offset-x | offset-y | blur-radius | color */
+box-shadow: 10px 5px 5px black;
+
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+/* inset | offset-x | offset-y | color */
+box-shadow: inset 5em 1em gold;
+
+/* Any number of shadows, separated by commas */
+box-shadow: 3px 3px red, -1em 0 0.4em olive;
+```
+
+`inset`
+默认阴影在边框外。使用inset后，阴影在边框内（即使是透明边框），背景之上内容之下。
+
+`<offset-x> <offset-y>`
+length值，用来设置阴影偏移量。`<offset-x>` 设置水平偏移量，如果是负值则阴影位于元素左边。 `<offset-y>` 设置垂直偏移量，如果是负值则阴影位于元素上面。
+如果两者都是0，那么阴影位于元素后面。这时如果设置了`<blur-radius>` 或`<spread-radius>` 则有模糊效果。
+
+`<blur-radius>`
+length值，值越大，糊糊面积越大，阴影就越大越淡。 不能为负值。默认为0，此时阴影边缘锐利。
+
+`<spread-radius>`
+length值。取正值时，阴影扩大；取负值时，阴影.收缩。默认为0，此时阴影与元素同样大。
+
+`<color>`
+如果没有指定，则由浏览器决定——通常是color的值，不过目前Safari取透明。
+
+####兼容性
+
+![border-radius-writing-order](images/css3-7.png)
+
+## text-shadow
+
+text-shadow 为文字添加阴影。可以为文字与  text-decorations  添加多个阴影，阴影值之间用逗号隔开。
+
+每个阴影指定相对文字的偏移量，可选的颜色及模糊半径。多个阴影从前往后叠加，第一个阴影在最前面。
+
+移动端暂时均未支持。
+
+####语法
+`text-shadow: offset-x offset-y blur-radius color;`
+
+`<color>`
+可选。如果想让各浏览器保持一致，则应指定颜色
+
+`<offset-x> <offset-y>`
+必选。这些长度值指定阴影相对文字的偏移量。`<offset-x>` 指定水平偏移量，若是负值则阴影位于文字左边。 `<offset-y>` 指定垂直偏移量，若是负值则阴影位于文字上面。如果两者均为0，则阴影位于文字后面（如果设定了`<blur-radius>` 则会有模糊效果)。
+
+`<blur-radius>`
+可选。length值。如果没有指定则为0。值越大，模糊半径越大，阴影也就越大越淡。
 
 ## multiple backgrounds
 
+Background属性在CSS3样式中已经彻底改革，开始支持多背景图片。对不支持的浏览器确认使用了备用图片，否则，它将跳此属性，使背景图像留空。
+
+```
+.multi_bg_example {
+  background-image   : url(https://mdn.mozillademos.org/files/11305/firefox.png),
+                       url(https://mdn.mozillademos.org/files/11307/bubbles.png),
+                       linear-gradient(to right, rgba(30, 75, 115, 1),  rgba(255, 255, 255, 0));
+
+  background-repeat  : no-repeat,
+                       no-repeat,
+                       no-repeat;
+
+  background-position: bottom right,
+                       left,
+                       right;
+}
+```
+
+Demo中的多背景分别为Firefox的logo，气泡背景图，颜色渐变，多背景的设置用逗号分隔。
+
+####兼容性
+请看 [这里](http://caniuse.com/#feat=multibackgrounds) 。
+
 ## background-size
+
+####语法
+`background-size: length|percentage|cover|contain;`
+```
+length	
+设置背景图像的高度和宽度。第一个值设置宽度，第二个值设置高度。如果只设置一个值，则第二个值会被设置为 "auto"。
+
+percentage	
+以父元素的百分比来设置背景图像的宽度和高度。第一个值设置宽度，第二个值设置高度。如果只设置一个值，则第二个值会被设置为 "auto"。
+
+cover	
+把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。背景图像的某些部分也许无法显示在背景定位区域中。
+
+contain	
+把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。
+```
+请看 [这里](http://caniuse.com/#search=background-size) 。
 
 ## text-overflow
 
