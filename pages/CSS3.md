@@ -205,7 +205,6 @@ transform 属性允许你修改CSS可视化模型的坐标控件。使用transfo
 transform 2D的主要方法有：translate()，rotate()，scale()，skew()，matrix()。
 
 - translate() 方法
-
 通过 translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数：
 ```
 div
@@ -220,7 +219,6 @@ div
 ```
 
 - rotate() 方法
-
 通过 rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。
 ```
 div
@@ -234,7 +232,6 @@ div
 }
 ```
 - scale() 方法
-
 通过 scale() 方法，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数：
 ```
 div
@@ -247,7 +244,6 @@ div
     transform: scale(2,4);
 }
 ```
-
 #### 优化建议
 - 使用CSS 3D加速，-webkit-transform:transition3d和-webkit-transform:translateZ为了渲染3D样式，但我们设置值为0后，并没有真正使用3D效果，但浏览器却因此开启了GPU硬件加速模式。
 
@@ -319,10 +315,26 @@ transition的优点在于简单易用，但是它有几个很大的局限。
 
 ## animation
 
+## scrolling on mobile
+
+在iOS上，下面的CSS能够提供流畅如原生般的滚动体验。不过在Android上就会有问题，因为元素的height被设置为定值，整个元素就无法滚动了，将height设置为auto，是可以暂时解决问题的，但当元素DOM结构变化后，height变大后又不能向下滚动了。而且height设置为auto后，iOS的滚动又会不流畅，尴尬。
+
+```
+.module {
+  width: 300px;
+  height: 200px;/*or 100%.  if set 'auto'， no smooth scrolling on iOS*/
+
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+```
+
+
 ## Flexible Box Model
 
 ##更多资料
 - 本文内容多数引用 [CSS | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
+- MarkDown在线编辑推荐 [作业部落](https://www.zybuluo.com)
 
 
 =============
