@@ -181,7 +181,7 @@ text-overflow 属性用于决定溢出的内容以何种形式提醒用户。它
 [Here](http://caniuse.com/#search=text-overflow)
 
 ## opacity
-透明opacity也可以使用rgba来实现，通常实现遮罩效果。因为我们讨论的是移动端所以不考虑使用filter支持IE X。
+透明opacity也可以使用rgba来实现，通常实现遮罩效果。
 ```
 {
     background-color:#000;
@@ -195,9 +195,53 @@ text-overflow 属性用于决定溢出的内容以何种形式提醒用户。它
 ```
 
 ## transform
-transform 属性允许你修改CSS可视化模型的坐标控件。使用transform，元素可以按照设定的值变形、旋转、缩放、倾斜。
+transform 属性允许你修改CSS可视化模型的坐标控件。使用transform，元素可以按照设定的值变形、旋转、缩放、倾斜，即向元素进行2D和3D转换。与transition结合就可以实现很多CSS3动画。
 
-## transtion
+####2D转换
+transform 2D的主要方法有：translate()，rotate()，scale()，skew()，matrix()。
+
+- translate() 方法
+通过 translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数：
+```
+div
+{
+    /*把元素从左侧移动 50 像素，从顶端移动 100 像素*/
+    -webkit-transform: translate(50px,100px);	/* Safari and Chrome */
+    -ms-transform: translate(50px,100px);		/* IE 9 */
+    -o-transform: translate(50px,100px);		/* Opera */
+    -moz-transform: translate(50px,100px);		/* Firefox */
+    transform: translate(50px,100px);
+}
+```
+
+- rotate() 方法
+通过 rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。
+```
+div
+{
+    /*把元素顺时针旋转 30 度*/
+    -webkit-transform: rotate(30deg);	/* Safari and Chrome */
+    -ms-transform: rotate(30deg);		/* IE 9 */
+    -o-transform: rotate(30deg);		/* Opera */
+    -moz-transform: rotate(30deg);		/* Firefox */
+    transform: rotate(30deg);
+}
+```
+- scale() 方法
+通过 scale() 方法，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数：
+```
+div
+{
+    /*把宽度转换为原始尺寸的 2 倍，把高度转换为原始高度的 4 倍*/
+    -webkit-transform: scale(2,4);	/* Safari 和 Chrome */
+    -ms-transform: scale(2,4);	/* IE 9 */
+    -o-transform: scale(2,4);	/* Opera */
+    -moz-transform: scale(2,4);	/* Firefox */
+    transform: scale(2,4);
+}
+```
+
+## transition
 
 CSS 过渡（transition）, 是 CSS3 规范的一部分,可以让属性的变化过程持续一段时间，而不是立即生效，将按一个曲线速率变化，这个过程是可以自定义。比如，将元素的高度从0%变为100%，将元素的颜色由白色变为黑色等。
 
@@ -238,6 +282,7 @@ transition是简写属性，有以下四个属性值：
 #### 相关事件
 
 检测过渡是否完成，在符合标准的浏览器下，这个事件是 transitionend, 在 WebKit 下是 webkitTransitionEnd。
+
 - propertyName: 字符串，指示已完成过渡的属性。
 - elapsedTime: 浮点数，指示当触发这个事件时过渡已运行的时间（秒）。这个值不受 transition-delay 影响。
 - 如果取消了过渡则不会触发 transitionend 事件。
@@ -252,6 +297,7 @@ transition是简写属性，有以下四个属性值：
 
 #### 局限：
 transition的优点在于简单易用，但是它有几个很大的局限。
+
 - transition需要事件触发，所以没法在网页加载时自动发生。
 - transition是一次性的，不能重复发生，除非一再触发，请使用animation。
 - transition只能定义开始状态和结束状态，不能定义中间状态，也就是说只有两个状态。CSS的animation可以解决这个问题，能够指定动画的多个中间状态。
@@ -259,5 +305,10 @@ transition的优点在于简单易用，但是它有几个很大的局限。
 ## animation
 
 ## Flexible Box Model
+
+##更多资料
+- 本文内容多数引用 [CSS | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
+
+
 =============
 [@bryan](https://github.com/saviroyu)
