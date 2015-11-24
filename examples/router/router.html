@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Router Example</title>
+
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdn.staticfile.org/backbone.js/1.1.2/backbone-min.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .views > * {display: none;}
+        #detail .modal-dialog { position: absolute; bottom: 0; top: 0; right: 0; left: 0;
+            margin: 44px; height: auto; width:auto; 
+        }
+        #detail .modal-content { height: 100%; }
+    </style>
+    <script>
+        "use strict"
+        let Router = Backbone.Router.extend({
+            routes:{
+                "about":"about",
+                "": "main",
+                "detail": "detail",
+            },
+            detail(){
+                this.main();
+                $("#detail").modal("show")
+            },
+            about(){
+                $("#about").show().siblings().hide();
+            },
+            main(){
+                $("#main").show().siblings().hide();
+            },
+        });
+        let router = new Router();
+        $(()=>{
+            Backbone.history.start()
+            $("#detail").on("hide.bs.modal", (e)=>{
+                router.navigate("", {trigger:true});
+            })
+            $(".btn-detail").click(()=>{
+                $("#detail").modal("toggle")
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Router Example</a>
+            </div>
+            <ul class="navbar-nav nav navbar-right">
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="views">
+        <div id="main" class="container-fluid">
+            <div class="jumbotron">
+                <h1> Main Content </h1>
+                <a class="btn btn-primary btn-detail" href="#detail">Content Detail</a>
+            </div>
+        </div>
+        <div id="about" class="container-fluid">
+            <div class="jumbotron">
+                <h1> About Page </h1>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="detail" data-backdrop="true" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    Detail Content
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
