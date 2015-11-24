@@ -12,15 +12,15 @@ mobile-h5-tips
 
 内容 | 整理人
 -----|-----
-[SPA方案框架推荐][page-spa] |	water
+[SPA方案框架推荐 ✓][page-spa] |	water
 [Web工程打包压缩方案][page-resources-bundling] |	warpig
-[Web加载过程优化方案][page-loading-optimize] |	shelton
+[Web加载过程优化方案 ✓][page-loading-optimize] |	shelton
 [移动端Web/JS框架推荐][page-mobile-framework] |	warpig
 [HTML5实用功能推荐][page-HTML5] |	arthur/bryan
-[CSS3新功能推荐及优化][page-CSS3] |	bryan/arthur
+[CSS3新功能推荐及优化 ✓][page-CSS3] |	bryan/arthur
 [Web安全指引][page-web-security] |	kidd
 [移动端Web常见兼容性问题][page-compatibility] |	edric
-[Web/JS测试框架推荐][page-testing] | water
+[Web/JS测试框架推荐 ✓][page-testing] | water
 
 [page-spa]: pages/SPA.md
 [page-CSS3]: pages/CSS3.md
