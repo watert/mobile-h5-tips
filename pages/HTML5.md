@@ -17,7 +17,7 @@ HTML5实用功能推荐
 #### 2、Application Cache的运行流程和文件规范
 **运行流程**
 
-图片
+![](images/appcache.jpg)
    
 **文件规范**
 
@@ -74,8 +74,9 @@ HTML5实用功能推荐
 - 等等。
 
 #### 2、H5 devicemotion 和deviceorientation API使用方法。
-*devicemotion</b>*：
-图片
+**devicemotion**：
+
+![](images/devicemotion.png)
 
       function initMotion(){
           if (window.DeviceMotionEvent) {
@@ -86,8 +87,9 @@ HTML5实用功能推荐
               alert("not support!");
           }  
       }
-*deviceorientation</b>*：
-图片
+**deviceorientation**：
+
+![](images/deviceorientation.png)
 
       function initorientation(){
       	if(window.DeviceOrientationEvent){
