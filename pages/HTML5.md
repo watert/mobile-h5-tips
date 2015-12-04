@@ -44,8 +44,20 @@ HTML5实用功能推荐
 - 虽然manifest清单中的NETWORK不是必写的，但是经过实测，页面中所需的资源是CACHE和NETWORK以及FALLBACK的并集，如果页面中引用的资源在三者中都没有指定，将不会获取，并不会默认从网络获取。
 - 站点中的其他页面即使没有设置manifest属性，请求的资源如果在缓存中也从缓存中访问。
 - 引用manifest页面若带参数，参数改变，浏览器会将页面认为是新的使用了application cache功能的页面，从而将该页面进行缓存，并且进行一次manifest的检查和拉取。
-- manifest的缓存加载和页面加载是异步的，所以manifest有更新时，需要刷新两次用户端才能实现更新。解决方法可以写一段脚本，判断当applicationcache状态为updateready时（此状态表示缓存资源更新了），提示用户更新页面，或者强制刷新。（示例如下）
-图片
+- manifest的缓存加载和页面加载是异步的，所以manifest有更新时，需要刷新两次用户端才能实现更新。解决方法可以写一段脚本，判断当applicationcache状态为updateready时（此状态表示缓存资源更新了），提示用户更新页面，或者强制刷新。
+
+（示例如下）
+
+      window.applicationCache.addEventListener('updateready', function(e) {  
+          if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {  
+              window.applicationCache.swapCache();  
+             if (confirm('是否下载新版本?')) {  
+                  window.location.reload();  
+              }  
+            }else {  
+              // Manifest didn't changed. Nothing new to server.  
+         }  
+      }, false); 
 
 ### 二、HTML5实用功能之运动度传感器事件devicemotion和方向传感器事件deviceorientation
 #### 1、H5 devicemotion和deviceorientation基本介绍和应用背景。
@@ -65,9 +77,25 @@ HTML5实用功能推荐
 *devicemotion</b>*：
 图片
 
-
+      function initMotion(){
+          if (window.DeviceMotionEvent) {
+              if(shakeFlag){
+                  window.addEventListener('devicemotion', deviceMotionHandler, false); 
+              }                
+          }else{
+              alert("not support!");
+          }  
+      }
 *deviceorientation</b>*：
 图片
+
+      function initorientation(){
+      	if(window.DeviceOrientationEvent){
+      	    window.addEventListener('deviceorientation',DeviceOrientationHandler,false);
+      	}else{
+      	    alert("您的浏览器不支持DeviceOrientation");
+      	} 
+      }
 
 #### 3、手机H5页面红包摇一摇Demo
     <!DOCTYPE html>
