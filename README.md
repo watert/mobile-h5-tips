@@ -16,7 +16,7 @@ mobile-h5-tips
 [Web工程打包压缩方案][page-resources-bundling] |	warpig
 [Web加载过程优化方案 ✓][page-loading-optimize] |	shelton
 [移动端Web/JS框架推荐][page-mobile-framework] |	warpig
-[HTML5实用功能推荐][page-HTML5] |	arthur/bryan
+[HTML5实用功能推荐 ✓][page-HTML5] |	arthur/bryan
 [CSS3新功能推荐及优化 ✓][page-CSS3] |	bryan/arthur
 [Web安全指引][page-web-security] |	kidd
 [移动端Web常见兼容性问题][page-compatibility] |	edric
