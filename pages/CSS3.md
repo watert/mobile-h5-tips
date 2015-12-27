@@ -247,7 +247,7 @@ div
 }
 ```
 #### 优化建议
-- 使用CSS 3D加速，-webkit-transform:transition3d和-webkit-transform:translateZ为了渲染3D样式，但我们设置值为0后，并没有真正使用3D效果，但浏览器却因此开启了GPU硬件加速模式。
+- 使用CSS 3D加速，-webkit-transform:transition3d和-webkit-transform:translateZ为了渲染3D样式，但我们设置值为0后，并没有真正使用3D效果，但浏览器却因此开启了GPU硬件加速模式。<font color="red">但在移动端上可能会引起某些bug，比如android客户端动态增加元素，无法向下滚动。</font>
 
 ```
 transform: rotateZ(-180deg) translate3D(0,0,0);
